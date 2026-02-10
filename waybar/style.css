@@ -1,0 +1,57 @@
+/* Reset general */
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "Inter", "JetBrains Mono", sans-serif;
+	font-size: 13px;
+	min-height: 0;
+}
+
+window#waybar {
+	background-color: #000000;
+	/* Fondo Negro */
+	color: #ffffff;
+	/* Texto Blanco */
+	border-bottom: 1px solid #333333;
+}
+
+/* Estilo para cada módulo */
+#workspaces button {
+	padding: 0 10px;
+	color: #666666;
+	/* Gris para inactivos */
+}
+
+#workspaces button.active {
+	color: #ffffff;
+	border-bottom: 2px solid #ffffff;
+}
+
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#battery,
+#window {
+	padding: 0 12px;
+	background-color: transparent;
+}
+
+/* Separadores visuales sutiles */
+#cpu,
+#memory,
+#network,
+#pulseaudio {
+	border-right: 1px solid #222222;
+}
+
+/* Estado crítico en blanco invertido para que resalte sin usar colores */
+#battery.critical {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+#network.disconnected {
+	color: #666666;
+}

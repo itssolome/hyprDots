@@ -1,0 +1,50 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+	"spacing": 4,
+	"modules-left": ["hyprland/workspaces", "hyprland/window"],
+	"modules-center": ["clock"],
+	"modules-right": ["cpu", "memory", "network", "pulseaudio", "battery"],
+
+	"hyprland/workspaces": {
+		"format": "{name}",
+	},
+
+	"hyprland/window": {
+		"format": "| {title}",
+		"max-length": 40,
+	},
+
+	"clock": {
+		"format": "{:%d %b  %H:%M}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	},
+
+	"cpu": {
+		"format": "CPU {usage}%",
+		"interval": 2,
+	},
+
+	"memory": {
+		"format": "RAM {percentage}%",
+		"interval": 2,
+	},
+
+	"network": {
+		"format-wifi": "WIFI {essid}",
+		"format-ethernet": "ETH CON",
+		"format-disconnected": "OFFLINE",
+	},
+
+	"pulseaudio": {
+		"format": "VOL {volume}%",
+		"format-muted": "MUTED",
+	},
+
+	"battery": {
+		"format": "BAT {capacity}%",
+		"format-charging": "CHG {capacity}%",
+		"format-plugged": "FULL",
+	},
+}
