@@ -1,0 +1,51 @@
+#input {
+	margin: 5px;
+	border: none;
+	background-color: #0c0d0a;
+	color: #b3b9b7;
+	border-radius: 30px;
+}
+
+#inner-box {
+	margin: 5px;
+	border: none;
+	background-color: #0c0d0a;
+	border-radius: 30px;
+}
+
+#outer-box {
+	margin: 5px;
+	border: none;
+	background-color: #0c0d0a;
+	border-radius: 30px;
+}
+
+#scroll {
+	margin: 0px;
+	border: 11ee1e;
+}
+
+#text {
+	margin: 5px;
+	border: none;
+	color: #a1a6a5;
+}
+
+#text:selected {
+	margin: 5px;
+	border: none;
+	color: #f2f2f2;
+}
+
+#entry:selected {
+	background-color: #989d9e;
+	color: #f2f2f2;
+	border-radius: 30px;
+}
+
+/* Add rounded corners to the Wofi window */
+#window {
+	border-radius: 30px;
+	width: 50px;
+	height: 1000px;
+}
