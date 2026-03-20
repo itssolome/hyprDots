@@ -9,6 +9,8 @@
 	"margin-right": 5,
 	"margin-bottom": 0,
 	"modules-left": [
+		"custom/arch",
+		"custom/separator",
 		"hyprland/workspaces",
 		"custom/separator",
 		"cpu",
@@ -55,6 +57,12 @@
 	"custom/separator": {
 		"format": "|",
 		"tooltip": false,
+	},
+	"custom/arch": {
+		"format": "󰣇 ",
+		"on-click": "wofi --show drun",
+		"on-click-right": "kitty",
+		"tooltip-format": "Menu\nSuper + O",
 	},
 	"custom/update": {
 		"format": "",
@@ -203,8 +211,8 @@
 		"on-click-right": "pamixer -t",
 	},
 	"mpris": {
-		"format": " {artist}-{title}",
-		"format-paused": "<span color='grey'>{status_icon}</span>",
+		"format": " {title}",
+		"format-paused": "<span color='grey'>{status_icon}</span> {title}",
 		"max-length": 25,
 		"player-icons": {
 			"default": "⏸",
@@ -213,7 +221,6 @@
 		"status-icons": {
 			"paused": "",
 		},
-		"ignored-players": ["firefox", "chromium", "brave"],
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
@@ -227,10 +234,11 @@
 		"return-type": "json",
 		"format-icons": {
 			"has-updates": " 󰏖",
-			"updated": "",
+			"updated": ":)",
 		},
 		"exec-if": "which waybar-module-pacman-updates",
 		"exec": "waybar-module-pacman-updates --no-zero-output",
+		"on-click": "kitty -e ~/.config/waybar/scripts/system-update.sh",
 	},
 	"group/tray-expander": {
 		"orientation": "horizontal",
